@@ -3,9 +3,9 @@ import { Sidebar } from "./components";
 
 export const Layout = () => {
   return (
-    <main className="min-h-svh flex flex-col lg:flex-row">
+    <main className="flex flex-col lg:flex-row">
       <Sidebar />
-      <div>
+      <div className="min-h-[calc(100svh-72px)] md:min-h-[calc(100svh-80px)] lg:min-h-[calc(100svh)] overflow-y-auto">
         <Outlet />
       </div>
     </main>

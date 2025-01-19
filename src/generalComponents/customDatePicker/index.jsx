@@ -1,5 +1,4 @@
 import { DatePicker } from "antd";
-import "antd/dist/reset.css";
 import { IconCalendar } from "../../assets/svgIconComponents";
 
 export const CustomDatePicker = () => {

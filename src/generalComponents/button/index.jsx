@@ -26,7 +26,7 @@ export const Button = ({
   return (
     <button
       className={`${variants[variant]} ${className} ${
-        withIcon && "flex items-center gap-4 pl-2"
+        withIcon && "flex items-center gap-2 pl-2"
       }`}
       disabled={disabled}
       onClick={() => onClick && onClick()}
