@@ -1,3 +1,302 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "League Spartan";
+    src: url(./assets/fonts/league-spartan/LeagueSpartan-VariableFont_wght.ttf);
+    font-weight: 100 900;
+    font-style: normal;
+  }
+}
+
+/* Custom Dropdown Styling */
+button.custom-dropdown-button {
+  padding: 16px 16px 16px 20px;
+  background-color: #fff;
+  border: 1px solid #dfe3fa;
+  border-radius: 4px;
+  color: #0c0e16;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  font-weight: 700;
+  font-family: "League Spartan";
+  height: 48px;
+  box-shadow: none;
+}
+
+button.custom-dropdown-button:hover,
+button.custom-dropdown-button:active,
+button.custom-dropdown-button:focus {
+  border: 1px solid #7c5dfa !important;
+}
+
+.custom-dropdown .ant-dropdown-menu {
+  padding: 0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 10px 20px 0px rgba(72, 84, 159, 0.25);
+}
+
+.custom-dropdown .ant-dropdown-menu-item {
+  background: #fff;
+  font-family: "League Spartan";
+  padding: 16px 24px !important;
+  color: #0c0e16;
+  font-size: 15px !important;
+  line-height: 15px !important;
+  letter-spacing: -0.25px !important;
+  font-weight: 700 !important;
+  border-radius: 0 !important;
+}
+
+.custom-dropdown .ant-dropdown-menu-item:hover {
+  color: #7c5dfa;
+}
+
+.custom-dropdown .ant-dropdown-menu-item:not(:last-child) {
+  border-bottom: 1px solid #dfe3fa;
+}
+
+/* Custom Dropdown Dark Theme Styling */
+body.dark button.custom-dropdown-button {
+  background-color: #1e2139;
+  border: 1px solid #252945;
+  color: #fff;
+}
+
+body.dark button.custom-dropdown-button:hover {
+  background-color: #1e2139 !important;
+  border: 1px solid #252945 !important;
+  color: #fff !important;
+}
+
+body.dark .custom-dropdown .ant-dropdown-menu {
+  background: #252945;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .custom-dropdown .ant-dropdown-menu-item {
+  background: #252945;
+  color: #dfe3fa;
+}
+
+body.dark .custom-dropdown .ant-dropdown-menu-item:not(:last-child) {
+  border-bottom: 1px solid #1e2139;
+}
+
+body.dark .custom-dropdown .ant-dropdown-menu-item:hover {
+  color: #9277ff;
+}
+/* Custom Dropdown Styling Ended */
+
+/* Date Picker Custom Styling Started */
+
+/* Date Picker Container */
+.ant-picker-outlined {
+  min-width: 240px;
+  height: 48px;
+}
+
+.ant-picker-outlined:has(.ant-picker-input:focus) {
+  border: 1px solid #9277ff;
+}
+
+/* Removing Background of Selected Date */
+.ant-picker-cell-selected .ant-picker-cell-inner {
+  background-color: transparent !important;
+}
+
+/* Input styling for light and dark theme */
+.ant-picker-input input {
+  color: #0c0e16 !important;
+}
+
+body.dark .ant-picker-input input {
+  color: #fff !important;
+}
+
+.custom-date-picker.ant-picker {
+  padding: 16px 16px 16px 20px;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #dfe3fa;
+  color: #0c0e16;
+  font-size: 16px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  font-weight: bold;
+  font-family: inherit;
+  height: 48px;
+}
+
+body.dark .ant-picker {
+  background: #1e2139;
+  border: 1px solid #252945;
+  color: #fff;
+}
+
+.ant-picker-date-panel {
+  max-width: 240px;
+}
+
+.ant-picker-header {
+  border-bottom: 0 !important;
+  padding: 0 24px !important;
+  max-width: 240px;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ant-picker-panel-container {
+  border-radius: 8px;
+  background: #fff;
+
+  box-shadow: 0px 10px 20px 0px rgba(72, 84, 159, 0.25);
+}
+
+body.dark .ant-picker-panel-container {
+  background: #252945;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.ant-picker-body {
+  padding: 0 20px 14px 20px !important;
+  max-width: 240px;
+}
+
+.ant-picker-content thead,
+.ant-picker-now {
+  display: none !important;
+}
+
+.ant-picker-cell {
+  height: 15px !important;
+  width: 16px !important;
+}
+
+.ant-picker-cell .ant-picker-cell-inner {
+  opacity: 0.0814;
+  color: #0c0e16 !important;
+  text-align: center !important;
+  font-family: "League Spartan" !important;
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 15px !important; /* 100% */
+  letter-spacing: -0.25px !important;
+  height: 15px !important;
+  width: 16px !important;
+}
+
+body.dark .ant-picker-cell .ant-picker-cell-inner {
+  color: #fff !important;
+  opacity: 0.0814;
+}
+
+body.dark .ant-picker-cell.ant-picker-cell-in-view .ant-picker-cell-inner {
+  color: #fff !important;
+
+  opacity: 1;
+}
+
+.ant-picker-cell.ant-picker-cell-in-view .ant-picker-cell-inner {
+  color: #0c0e16 !important;
+  text-align: center !important;
+  font-family: "League Spartan" !important;
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 15px !important; /* 100% */
+  letter-spacing: -0.25px !important;
+  height: 15px !important;
+  width: 16px !important;
+  opacity: 1;
+}
+
+.ant-picker-cell-today .ant-picker-cell::before,
+.ant-picker-cell-today .ant-picker-cell::after {
+  display: none !important;
+}
+
+.ant-picker-next-icon,
+.ant-picker-prev-icon {
+  color: #7c5dfa !important;
+  font-weight: bold !important;
+}
+
+.ant-picker-year-btn,
+.ant-picker-month-btn {
+  color: #0c0e16 !important;
+  text-align: center !important;
+  font-family: "League Spartan" !important;
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 15px !important; /* 100% */
+  letter-spacing: -0.25px !important;
+}
+
+body.dark .ant-picker-year-btn,
+body.dark .ant-picker-month-btn {
+  color: #fff !important;
+}
+
+.ant-picker-year-btn {
+  margin-left: 3px !important;
+}
+
+.ant-picker-header .ant-picker-header-super-prev-btn,
+.ant-picker-header .ant-picker-header-super-next-btn {
+  display: none !important;
+}
+
+.ant-picker-cell-today.ant-picker-cell-in-view.ant-picker-cell
+  .ant-picker-cell-inner {
+  color: #7c5dfa !important;
+}
+
+body.dark
+  .ant-picker-cell-today.ant-picker-cell-in-view.ant-picker-cell
+  .ant-picker-cell-inner {
+  color: #7c5dfa !important;
+}
+
+.ant-picker-cell-today.ant-picker-cell-in-view.ant-picker-cell
+  .ant-picker-cell-inner::before {
+  display: none !important;
+}
+
+.ant-picker-header > button {
+  min-width: auto;
+}
+
+td.ant-picker-cell,
+td.ant-picker-cell.ant-picker-cell-in-view {
+  width: 16px !important;
+
+  padding: 3px 0 !important;
+}
+
+.ant-picker-dropdown .ant-picker-next-icon::before,
+.ant-picker-dropdown .ant-picker-prev-icon::before {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: 8.456px;
+  height: 8.456px;
+  border: 2px solid currentcolor;
+  border-block-width: 2px 0;
+  border-inline-width: 2px 0;
+  content: "";
+}
+
+.ant-picker-clear {
+  display: none !important;
+}
+/* Custom Dropdown Styling End */
