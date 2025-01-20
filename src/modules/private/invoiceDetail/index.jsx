@@ -3,6 +3,7 @@ import { invoices } from "../../../data";
 import { useEffect, useState } from "react";
 import { Button } from "../../../generalComponents";
 import { DetailCard, Header } from "./components";
+import { MobileAction } from "./components/mobileActions";
 
 export const InvoiceDetail = () => {
   const { id } = useParams();
@@ -23,6 +24,7 @@ export const InvoiceDetail = () => {
       </div>
       <Header invoice={invoice} />
       <DetailCard invoice={invoice} />
+      <MobileAction invoice={invoice} />
     </div>
   );
 };
