@@ -4,7 +4,7 @@ import { ItemsCard } from "../itemsCard";
 export const DetailCard = ({ invoice }) => {
   console.log("invoice", invoice);
   return (
-    <div className="mt-4 md:mt-6 bg-white dark:bg-dark-800 rounded-[6px] md:rounded-lg shadow-invoice-card p-6 mb-[91px]">
+    <div className="mt-4 md:mt-6 bg-white dark:bg-dark-800 rounded-[6px] md:rounded-lg shadow-invoice-card p-6 mb-[120px]">
       <div>
         <div className="text-heading-sm-variant font-bold hover:underline">
           <span className="text-blue-muted-500">#</span>
