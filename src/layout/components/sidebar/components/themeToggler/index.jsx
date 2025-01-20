@@ -1,29 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import iconMoon from "../../../../../assets/icon-moon.svg";
 import iconSun from "../../../../../assets/icon-sun.svg";
 
 export const ThemeToggler = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+const [isToggled, setToggle] = useState(
+    localStorage.getItem("theme") === "dark"
+  );
 
-  const handleThemeChange = () => {
-    const currentTheme = theme;
-
-    if (currentTheme === "light") {
-      setTheme("dark");
-      document.getElementById("body").classList.add("dark");
+  useEffect(() => {
+    if (isToggled) {
       localStorage.setItem("theme", "dark");
+      document.getElementById("body").classList.add("dark");
     } else {
-      setTheme("light");
-      document.getElementById("body").classList.remove("dark");
       localStorage.setItem("theme", "light");
+      document.getElementById("body").classList.remove("dark");
     }
-  };
+  }, [isToggled]);
 
   return (
-    <button onClick={handleThemeChange}>
+    <button onClick={() => setToggle((prev) => !prev)}>
       <img
-        src={theme === "dark" ? iconSun : iconMoon}
-        alt={theme === "dark" ? "Sun Icon" : "Moon Icon"}
+        src={isToggled ? iconSun : iconMoon}
+        alt={isToggled ? "Sun Icon" : "Moon Icon"}
       />
     </button>
   );

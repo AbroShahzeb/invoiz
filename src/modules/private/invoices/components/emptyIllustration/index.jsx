@@ -2,7 +2,7 @@ import emptyIllustration from "../../../../../assets/illustration-empty.svg";
 
 export const EmptyIllustration = () => {
   return (
-    <div className="mx-auto w-full pt-[102px] pb-[139px] md:pt-[209px] md:pb-[277px] flex items-center justify-center">
+    <div className="mx-auto w-full pt-[102px] pb-[139px] md:pt-[209px] md:pb-[277px] lg:py-20 flex items-center justify-center">
       <div className="flex flex-col gap-[42px] md:gap-[66px]">
         <div>
           <img

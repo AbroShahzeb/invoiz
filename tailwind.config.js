@@ -42,12 +42,15 @@ export default {
         body: ["13px", { lineHeight: "18px", letterSpacing: "-0.1px" }],
         "body-variant": [
           "13px",
-          { lineHeight: "15px", letterSpacing: "-0.25px" },
+          { lineHeight: "15px", letterSpacing: "-0.1px" },
         ],
       },
     },
     fontFamily: {
       "league-spartan": "League Spartan",
+    },
+    boxShadow: {
+      "invoice-card": " 0px 10px 10px -10px rgba(72, 84, 159, 0.10)",
     },
   },
   darkMode: "class",
