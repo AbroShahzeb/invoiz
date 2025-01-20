@@ -1,10 +1,9 @@
 import { FormattedDate } from "react-intl";
 import { ItemsCard } from "../itemsCard";
 
-export const DetailCard = ({ invoice }) => {
-  console.log("invoice", invoice);
+export const DetailCardMobile = ({ invoice }) => {
   return (
-    <div className="mt-4 md:mt-6 bg-white dark:bg-dark-800 rounded-[6px] md:rounded-lg shadow-invoice-card p-6 mb-[120px]">
+    <div className="mt-4 md:mt-6 bg-white dark:bg-dark-800 rounded-[6px] md:rounded-lg shadow-invoice-card p-6 mb-[120px] md:hidden">
       <div>
         <div className="text-heading-sm-variant font-bold hover:underline">
           <span className="text-blue-muted-500">#</span>

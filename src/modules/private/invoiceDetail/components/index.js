@@ -1,5 +1,6 @@
 import { Header } from "./header";
-import { DetailCard } from "./detailCard";
+import { DetailCardMobile } from "./detailCardMobile";
 import { ItemsCard } from "./itemsCard";
+import { DetailCardBig } from "./detailCardBig";
 
-export { Header, DetailCard, ItemsCard };
+export { Header, DetailCardMobile, ItemsCard, DetailCardBig };

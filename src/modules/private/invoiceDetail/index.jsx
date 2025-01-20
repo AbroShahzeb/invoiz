@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { invoices } from "../../../data";
 import { useEffect, useState } from "react";
 import { Button } from "../../../generalComponents";
-import { DetailCard, Header } from "./components";
+import { DetailCardBig, DetailCardMobile, Header } from "./components";
 import { MobileAction } from "./components/mobileActions";
 
 export const InvoiceDetail = () => {
@@ -23,7 +23,8 @@ export const InvoiceDetail = () => {
         <Button variant="back" onClick={() => navigate(-1)} label="Go back" />
       </div>
       <Header invoice={invoice} />
-      <DetailCard invoice={invoice} />
+      <DetailCardMobile invoice={invoice} />
+      <DetailCardBig invoice={invoice} />
       <MobileAction invoice={invoice} />
     </div>
   );
