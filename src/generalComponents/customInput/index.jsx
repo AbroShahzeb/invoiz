@@ -9,7 +9,7 @@ export const CustomInput = ({
 }) => {
   return (
     <div className="flex flex-col gap-[9px]">
-      <div className="flex items-center gap-3 justify-between">
+      <div className="flex items-center gap-1 justify-between">
         {label && (
           <label
             htmlFor={name}

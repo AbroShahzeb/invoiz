@@ -10,7 +10,7 @@ export const CustomDatePicker = () => {
     <div>
       <DatePicker
         onChange={onChange}
-        className="custom-date-picker"
+        className="custom-date-picker w-full"
         suffixIcon={
           <span className="text-primary dark:text-[#7E88C3]">
             <IconCalendar />

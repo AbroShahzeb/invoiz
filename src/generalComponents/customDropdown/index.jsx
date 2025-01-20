@@ -68,7 +68,7 @@ export const CustomDropdown = ({
           customOverlay
         ) : (
           <Button
-            className="custom-dropdown-button h-full"
+            className="custom-dropdown-button h-full w-full"
             onClick={(e) => e.preventDefault()}
             style={{ width: inputWidth && inputWidth }}
           >

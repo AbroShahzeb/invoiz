@@ -17,6 +17,7 @@ export const PaymentTermsDropdown = ({
       onSelect={onSelect}
       selectedOption={selected}
       label={label}
+      className="w-full"
     />
   );
 };

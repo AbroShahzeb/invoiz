@@ -1,5 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Button, CustomInput } from "../../../../../generalComponents";
+import {
+  Button,
+  CustomDatePicker,
+  CustomInput,
+  PaymentTermsDropdown,
+} from "../../../../../generalComponents";
 import { useForm } from "react-hook-form";
 
 export const AddEditInvoice = ({
@@ -43,7 +48,7 @@ export const AddEditInvoice = ({
             animate={isOpen ? "open" : "closed"}
             variants={variants}
             exit={"closed"}
-            className="max-h-screen h-screen w-96 bg-white dark:bg-dark-700 fixed top-[72px] left-0 right-0 bottom-0 md:top-[80px] md:right-auto lg:top-0 lg:left-[103px] px-6 py-8"
+            className="min-h-[calc(100vh-72px)] overflow-y-auto w-96 bg-white dark:bg-dark-700 fixed top-[72px] left-0 right-0 bottom-0 md:top-[80px] md:right-auto lg:top-0 lg:left-[103px] px-6 py-8"
             onSubmit={handleSubmit(onSubmit)}
           >
             <div>
@@ -71,7 +76,9 @@ export const AddEditInvoice = ({
             </div>
 
             <div>
-              <p>Bill from</p>
+              <p className="text-heading-sm-variant font-bold text-primary">
+                Bill from
+              </p>
               <div className="mt-6">
                 <CustomInput
                   label="Street Address"
@@ -84,20 +91,24 @@ export const AddEditInvoice = ({
 
               <div className="flex flex-col gap-6 md:flex-row mt-6">
                 <div className="flex items-center gap-6">
-                  <CustomInput
-                    label="City"
-                    register={register}
-                    validationRules={{ required: "Can't be empty" }}
-                    name="senderAddress.city"
-                    error={errors?.senderAddress?.city?.message}
-                  />
-                  <CustomInput
-                    label="Post Code"
-                    register={register}
-                    validationRules={{ required: "Can't be empty" }}
-                    name="senderAddress.postCode"
-                    error={errors?.senderAddress?.postCode?.message}
-                  />
+                  <div className="flex-1">
+                    <CustomInput
+                      label="City"
+                      register={register}
+                      validationRules={{ required: "Can't be empty" }}
+                      name="senderAddress.city"
+                      error={errors?.senderAddress?.city?.message}
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <CustomInput
+                      label="Post Code"
+                      register={register}
+                      validationRules={{ required: "Can't be empty" }}
+                      name="senderAddress.postCode"
+                      error={errors?.senderAddress?.postCode?.message}
+                    />
+                  </div>
                 </div>
                 <CustomInput
                   label="Country"
@@ -107,6 +118,93 @@ export const AddEditInvoice = ({
                   error={errors?.senderAddress?.country?.message}
                 />
               </div>
+            </div>
+
+            <div className="mt-10">
+              <p className="text-heading-sm-variant font-bold text-primary">
+                Bill to
+              </p>
+              <div className="mt-6">
+                <CustomInput
+                  label="Client's Name"
+                  register={register}
+                  validationRules={{ required: "Can't be empty" }}
+                  name="clientName"
+                  error={errors?.clientName?.message}
+                />
+              </div>
+
+              <div className="mt-6">
+                <CustomInput
+                  label="Client's Email"
+                  register={register}
+                  validationRules={{ required: "Can't be empty" }}
+                  name="clientEmail"
+                  error={errors?.clientEmail?.message}
+                />
+              </div>
+
+              <div className="mt-6">
+                <CustomInput
+                  label="Street Address"
+                  register={register}
+                  validationRules={{ required: "Can't be empty" }}
+                  name="clientAddress.street"
+                  error={errors?.clientAddress?.street?.message}
+                />
+              </div>
+
+              <div className="flex flex-col gap-6 md:flex-row mt-6">
+                <div className="flex items-center gap-6">
+                  <div className="flex-1">
+                    <CustomInput
+                      label="City"
+                      register={register}
+                      validationRules={{ required: "Can't be empty" }}
+                      name="clientAddress.city"
+                      error={errors?.clientAddress?.city?.message}
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <CustomInput
+                      label="Post Code"
+                      register={register}
+                      validationRules={{ required: "Can't be empty" }}
+                      name="clientAddress.postCode"
+                      error={errors?.clientAddress?.postCode?.message}
+                    />
+                  </div>
+                </div>
+                <CustomInput
+                  label="Country"
+                  register={register}
+                  validationRules={{ required: "Can't be empty" }}
+                  name="clientAddress.country"
+                  error={errors?.clientAddress?.country?.message}
+                />
+              </div>
+            </div>
+
+            <div>
+              <div>Invoice Date</div>
+              <CustomDatePicker />
+            </div>
+
+            <div className="w-full">
+              <PaymentTermsDropdown />
+            </div>
+
+            <div className="mt-6">
+              <CustomInput
+                label="Project / Description"
+                register={register}
+                validationRules={{ required: "Can't be empty" }}
+                name="description"
+                error={errors?.description?.message}
+              />
+            </div>
+            <div>
+              <Button label="Create" type="submit" />
             </div>
           </motion.form>
         </>
